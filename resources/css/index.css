@@ -48,7 +48,8 @@
 
     header
     {
-        position: fixed;
+        position: sticky;
+        top: -1px;
         z-index: 100;
         display: flex;
         justify-content: space-between;
@@ -56,6 +57,22 @@
         height: 9%;
         padding: 20px 20px;
         /* border: 1px solid green; */
+    }
+
+    .home-button
+    {
+        display: inline-block;
+    }
+
+    .home-button i
+    {
+        color: white;
+        cursor: pointer;
+    }
+
+    .home-button a:visited
+    {
+        color: white;
     }
 
     .main-nav
@@ -81,7 +98,7 @@
     {
         position: absolute;
         background-color: white;
-        width: 26px;
+        width: 24px;
         height: 3px;
         border-radius: 6px;
         transition: 0.5s;
@@ -153,18 +170,6 @@
     }
 
 
-    .profile-pic
-    {
-        display: inline-block;
-    }
-    .profile-pic img
-    {
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-    }
-
-
     /* The Slider */
 
     section
@@ -196,15 +201,29 @@
         /* overflow: hidden; */
     }
 
+    #slider .text
+    {
+        position: sticky;
+        top: -1px;
+        z-index: 3;
+        /* bottom: 20px; */
+    }
+
     #slider h2
     {
-        z-index: 3;
         align-self: flex-start;
         width: 60%;
         color: white;
         font-family: 'Source Serif Pro';
         font-weight: 600;
         font-size: 4.5em;
+    }
+
+    #slider p
+    {
+        font-family: 'Source Serif Pro';
+        font-size: 1.4em;
+        color: white;
     }
     
 }
