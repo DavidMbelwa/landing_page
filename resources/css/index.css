@@ -41,7 +41,7 @@
     body
     {
         height: 100vh;
-        background-color: #E4FCFF;
+        background-color: hsl(180, 67%, 99%);
     }
     
     /* header */
@@ -157,14 +157,14 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        background-color:hsl(26, 27%, 59%);
+        background-color:#ffdab8;
         z-index: 80; /* Followed by this */
         left: 0;
         top: 0;
         font-family: 'Source Sans Pro';
         font-size: 22px;
         font-weight: 600;
-        color: white;
+        color: #944c09;
     }
 
 
@@ -176,7 +176,7 @@
         align-items: center;
         flex-direction: column;
         height: 91vh;
-        /* border: 1px solid red; */
+        border: 1px solid red;
         padding: 0;
         width: 100%;
         overflow: hidden;
@@ -205,7 +205,7 @@
         position: sticky;
         align-self: flex-start;
         top: -1px;
-        background
+        /* background */
         z-index: 3; /* To place this element just above the background picture */
         /* bottom: 20px; */
     }
@@ -225,6 +225,64 @@
         font-family: 'Source Serif Pro';
         font-size: 1.4em;
         color: white;
+    }
+
+
+    /* Kurslar Kısmı */
+    #kurslar
+    {
+        flex-flow: row wrap;
+        height: fit-content;
+        font-family: 'Source Serif Pro';
+    }
+
+    #kurslar p
+    {
+        font-family: 'Source Sans Pro';
+        font-weight: 400;
+    }
+
+    .sec-Header
+    {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-size: 32px;
+        margin-bottom: 20px;
+        border: 1px solid green;
+    }
+
+    .cards
+    {
+        display: flex;
+        margin: 30px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cards p
+    {
+        padding: 0 40px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .grid
+    {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: 1px solid purple;
+    }
+
+    .grid-items
+    {
+
+        height: 200px;
+        width: 80%;
+        border: 1px dotted red;
     }
     
 }
