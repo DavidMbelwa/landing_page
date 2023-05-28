@@ -7,6 +7,9 @@
   <meta name="keywords" content="David Mukajanga, Teacher David, David Teacher">
   <link rel="stylesheet" type="text/css" href="resources/css/index.css"/>
 
+  <!-- Swiper's Slider -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +46,7 @@
         <img id="landing-1" src="resources/imgs/landing.png"/>
         
         <div class="text">
-          <h2>Bu genç beyinleri geliştirelim!</h2>
+          <h2>Genç beyinleri geliştirelim!</h2>
 
           <p>Dünyaya erişmelerini sağlayalım.</p>
         </div>
@@ -53,39 +56,43 @@
       <section class="col-12" id="kurslar">
         <h2 class="sec-Header">Kurslar</h2>
 
-        <div class="cards">
+        <div class="swiper mySwiper cards">
           <h2>Yaz Kurslar</h2>
           <p>
             İlk ve Orta Okuldaki çoçuklar uygun olan yüz yüze dersler.
             Var olan kurslar aşağıda belirtiliyor.
           </p>
 
-          <div class="grid">
-            <div class="grid-items">
+          <div class="swiper-wrapper grid">
+            <div class="swiper-slide grid-items">
               <h3>Birinci Adım</h3>
               <img src="">
               <p>5-10 Yaş, A1</p>
             </div>
 
-            <div class="grid-items">
+            <div class="swiper-slide grid-items">
               <h3>Koşabilenler</h3>
               <img src="">
               <p>5-10 Yaş, A2 <br>10-15 Yaş, A1</p>
             </div>
 
-            <div class="grid-items">
+            <div class="swiper-slide grid-items">
               <h3>Uçanlar</h3>
               <img src="">
               <p>5-15 Yaş, B1</p>
             </div>
           </div>
 
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+
           <div class="course-content">
             <a href=""><button>Kursu Detayları Bakın</button></a>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="swiper mySwiper cards">
           <h2>Online: Bireysel Çalışma</h2>
           <p>
             İngilizce'nin Temellerin Yenilemek İsteyen ve ya Başlangiç Seviyeden
@@ -93,58 +100,67 @@
             Var olan şeçenekleri aşağıda belirtiliyor.
           </p>
 
-          <div class="grid">
-            <div class="grid-items">
+          <div class="swiper-wrapper grid">
+            <div class="swiper-slide grid-items">
               <img src="">
               <h3>Başlangiç: A1</h3>
             </div>
 
-            <div class="grid-items">
+            <div class="swiper-slide grid-items">
               <img src="">
               <h3>Başlangiç: A2</h3>
             </div>
 
-            <div class="grid-items">
+            <div class="swiper-slide grid-items">
               <img src="">
               <h3>Orta Seviye: B1</h3>
             </div>
 
-            <div class="grid-items">
+            <div class="swiper-slide grid-items">
               <img src="">
               <h3>Orta Seviye: B2</h3>
             </div>
 
-            <div class="grid-items">
+            <div class="swiper-slide grid-items">
               <img src="">
               <h3>Ileri Duzey: C1</h3>
             </div>
           </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          
 
           <div class="course-content">
             <a href=""><button>Kursu İçerikleri Bakın</button></a>
           </div>
         </div>
 
-        <div class="cards">
+        <div class="swiper mySwiper cards">
           <h2>Online Praktik</h2>
           <p>Temeller var olanlar için Uygun Olan Konuşma ve Aksan Praktığı.</p>
 
-          <div class="grid">
-            <div class="grid-items">
+          <div class="swiper-wrapper grid">
+            <div class="swiper-slide grid-items">
               <img src="">
               <h3>B1</h3>
             </div>
 
-            <div class="grid-items">
+            <div class="swiper-slide grid-items">
               <img src="">
               <h3>B2</h3>
             </div>
 
-            <div class="grid-items">
+            <div class="swiper-slide grid-items">
               <img src="">
               <h3>C1</h3>
             </div>
           </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
 
           <div class="course-content">
             <a href=""><button>Kursu İçerikleri Bakın</button></a>
@@ -153,7 +169,29 @@
       </section>
     </main>
 
+    <!-- My JS -->
     <script src="resources/js/index.js"></script>
+
+    <!-- Swiper's JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
   </body>
   </html>
   
