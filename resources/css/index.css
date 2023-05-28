@@ -193,7 +193,8 @@
     {
         position: absolute;
         bottom: 0px;
-        max-width: 100%;
+        max-width: 600px;
+        min-width: auto;
         min-height: 100%; 
         left: 0px;
         /* overflow: hidden; */
@@ -273,6 +274,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin: 20px 0;
         /* border: 1px solid purple; */
     }
 
@@ -285,6 +287,20 @@
         height: 200px;
         width: 100%;
         border: 1px dotted red;
+    }
+
+
+    /* After adding the swiper */
+
+    .swiper
+    {
+        width: 100%;
+    }
+
+    .swiper-slide
+    {
+        position: relative;
+        width: 100%;
     }
     
 }
