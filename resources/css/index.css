@@ -288,19 +288,3 @@
         width: 100%;
         border: 1px dotted red;
     }
-
-
-    /* After adding the swiper */
-
-    .swiper
-    {
-        width: 100%;
-    }
-
-    .swiper-slide
-    {
-        position: relative;
-        width: 100%;
-    }
-    
-}
